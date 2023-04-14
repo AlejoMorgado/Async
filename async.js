@@ -1,4 +1,4 @@
-const fetchPeople = async() => {
+const fetchPeople = async () => {
   try {
     const requestPeople = await fetch("https://swapi.dev/api/people/", {
       method: "GET"
@@ -12,7 +12,7 @@ const fetchPeople = async() => {
         mass: person.mass
       }
     })
-    .filter((person) => person.height > 150)
+      .filter((person) => person.height > 150)
     console.log(people);
   } catch (error) {
     console.error(`An error ocurred: ${error}`);

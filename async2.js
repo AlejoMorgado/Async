@@ -1,4 +1,4 @@
-const fetchSpecies = async() => {
+const fetchSpecies = async () => {
   try {
     const requestSpecies = await fetch("https://swapi.dev/api/species", {
       method: "GET"
@@ -12,9 +12,9 @@ const fetchSpecies = async() => {
         classification: spicies.classification
       }
     })
-    .filter((spicies) => spicies.classification === "mammal" )
+      .filter((spicies) => spicies.classification === "mammal")
     console.log(speciesType);
-  }catch (error){
+  } catch (error) {
     console.error(`An error ocurred: ${error}`);
   }
 }
